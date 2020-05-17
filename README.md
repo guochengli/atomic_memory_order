@@ -54,3 +54,6 @@ Key Points:
 ## 2) 与 atomic_thread_fence 连用
 
 TODO
+
+
+[^1]: https://preshing.com/20120913/acquire-and-release-semantics/#IDComment721195739
