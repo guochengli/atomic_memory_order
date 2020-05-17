@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(atomic_memory_order CXX)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_FLAGS "-O2 -Wno-empty-body")
+add_executable(ordering ordering.cc)
+target_link_libraries(ordering pthread)
