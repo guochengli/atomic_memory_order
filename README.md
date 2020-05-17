@@ -49,3 +49,7 @@ Key Points:
 - x86_64 实测：
   - seq_cst 与 load 操作连用时，与所有 memory_order 都等效。即编译产生同样的机器码。
   - seq_cst 与 store 操作连用时，与 acquire/consume/acq_rel 等效。
+
+### 2) 与 atomic_thread_fence 连用
+
+TODO
