@@ -23,7 +23,7 @@ void thread1Func() {
     //sem_wait(&beginSema1);  // Wait for signal
     while (begin1 == 0); begin1 = 0;
     while (std::rand() % 8 != 0) {}  // Random delay
-    X.store(1, std::memory_order_seq_cst);
+    X.store(1, std::memory_order_relaxed);  // if changed to seq_cst, no data race
     //std::atomic_thread_fence(std::memory_order_seq_cst);
     r1.store(Y.load(std::memory_order_relaxed), std::memory_order_seq_cst);
     //sem_post(&endSema);  // Notify transaction complete
@@ -36,7 +36,7 @@ void thread2Func() {
     //sem_wait(&beginSema2);  // Wait for signal
     while (begin2 == 0); begin2 = 0;
     while (std::rand() % 8 != 0) {}  // Random delay
-    Y.store(1, std::memory_order_seq_cst);
+    Y.store(1, std::memory_order_relaxed);  // if changed to seq_cst, no data race
     //std::atomic_thread_fence(std::memory_order_seq_cst);
     r2.store(X.load(std::memory_order_relaxed), std::memory_order_seq_cst);
     //sem_post(&endSema);  // Notify transaction complete
