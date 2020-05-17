@@ -6,7 +6,9 @@ Key Points:
 - acquire semantics 一般表示 "最先 Load"
 - 注意 x86_64 CPU 一般[^1]都满足 strong memory model 特性：CPU 四种可能发生的乱序中，只允许StoreLoad乱序(或称为StoreLoad重排)
 
-![](http://45.32.60.168/lgc/2019-07-27_18.38.17.png)
+<p align="center">
+  <img src="http://45.32.60.168/lgc/2019-07-27_18.38.17.png">
+</p>
 
 ### 1）与 atomic 连用
 
