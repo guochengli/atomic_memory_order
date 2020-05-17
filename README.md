@@ -1,4 +1,5 @@
-## 六种 memory_order
+
+# 六种 memory_order
 
 Key Points:
 - 要从"防止编译器重排"与"防止CPU乱序"两个角度去理解 memory_order
@@ -10,7 +11,7 @@ Key Points:
   <img src="http://45.32.60.168/lgc/2019-07-27_18.38.17.png">
 </p>
 
-### 1）与 atomic 连用
+## 1）与 atomic 连用
 
 **relaxed**：atomic variable 的 **relaxed** 操作和普通变量普通操作有何区别？
 - 普通变量的SL操作并不保证原子性，而 atomic 变量的所有操作都是保证原子性的。(TODO: 甚至不会被中断打断？)
@@ -50,6 +51,6 @@ Key Points:
   - seq_cst 与 load 操作连用时，与所有 memory_order 都等效。即编译产生同样的机器码。
   - seq_cst 与 store 操作连用时，与 acquire/consume/acq_rel 等效。
 
-### 2) 与 atomic_thread_fence 连用
+## 2) 与 atomic_thread_fence 连用
 
 TODO
