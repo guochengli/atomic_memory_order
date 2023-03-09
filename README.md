@@ -8,7 +8,7 @@ Key Points:
 - 注意 x86_64 CPU 一般[^1]都满足 strong memory model 特性：CPU 四种可能发生的乱序中，只允许StoreLoad乱序(或称为StoreLoad重排)
 
 <p align="center">
-  <img src="http://45.32.60.168/lgc/2019-07-27_18.38.17.png">
+  <img src="https://5359.lgc01.top/lgc/2019-07-27_18.38.17.png">
 </p>
 
 ## 1）与 atomic 连用
