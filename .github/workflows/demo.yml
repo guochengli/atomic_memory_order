@@ -10,7 +10,7 @@ jobs:
         run: |
           echo $EVENT_CONTEXT
       - name: Label pull request
-        uses: andymckay/labeler@v4
+        uses: andymckay/labeler@master
         with:
           labels: "required-label"
       - name: if_fail
